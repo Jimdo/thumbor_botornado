@@ -12,5 +12,7 @@ setup(
     install_requires=[
         'thumbor>=5.0.0',
         'botornado==0.0.3',
+        'librato-metrics',
+
     ]
 )
