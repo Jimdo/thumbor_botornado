@@ -20,5 +20,5 @@ def load(context, url, callback):
         S3Loader.load(context, url, callback)
     finish = datetime.datetime.now()
     metric_name = "thumbor.loader.%s.request_time" % method
-    LIBRATO_API.submit((finish - start).total_seconds() * 1000, description="original file request time (ms)")
+    LIBRATO_API.submit(metric_name, (finish - start).total_seconds() * 1000, description="original file request time (ms)")
 
